@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "repos": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "filesPath": {
+                    "type": "string"
+                  },
+                  "pipelines": {
+                    "type": "array"
+                  }
+                }
+              }
+            },
+            "environments": {
+              "type": "array"
+            },
+            "variableGroups": {
+              "type": "array"
+            },
+            "teams": {
+              "type": "array"
+            },
+            "serviceConnections": {
+              "type": "array"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
